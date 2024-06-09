@@ -42,7 +42,7 @@ ul {
   color: white;
   background-color: #25397b;
   float: right;
-  margin-right: 140px; /* Adjusted for responsiveness */
+  margin-right: 140px;
 }
 
 .confetti {
@@ -100,7 +100,6 @@ p {
   color: black;
 }
 
-/* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
   #root {
     padding: 1rem;
