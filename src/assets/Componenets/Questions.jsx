@@ -36,16 +36,10 @@ export default function Questions() {
       newSelectedAnswers[questionIndex] = selectedAnswer; 
       setSelectedAnswers(newSelectedAnswers);
       
-      if (selectedAnswer === questions[questionIndex].correct_answer && selectedAnswers[questionIndex] !== true && score<5) {
-        setScore(prevScore => prevScore + 1);
-      } else if (selectedAnswer !== questions[questionIndex].correct_answer && selectedAnswers[questionIndex] === true && score>0 ) {
-        setScore(prevScore => prevScore - 1);
-      }
     }
   };
   const handleCheckAnswersClick = () => {
     setShowResult(true);
-  
     let newScore = 0;
     questions.forEach((question, index) => {
       if (selectedAnswers[index] === question.correct_answer) {
@@ -64,7 +58,7 @@ export default function Questions() {
     setShowResult(false);
     setScore(0);
     setSelectedAnswers(Array(5).fill(null));
-    setPlayAgain(prevPlayAgain => !prevPlayAgain);
+    setPlayAgain(true);
   };
 
   const shuffleArray = (array) => {

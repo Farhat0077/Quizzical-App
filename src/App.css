@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -40,9 +41,8 @@ ul {
   display: flex;
   color: white;
   background-color: #25397b;
-  float: inline-end;
-   margin-right:300px ;
- 
+  float: right;
+  margin-right: 140px; /* Adjusted for responsiveness */
 }
 
 .confetti {
@@ -61,11 +61,9 @@ h2 {
   margin-left: 150px;
 }
 
-
 .answer {
   cursor: pointer;
 }
-
 
 .custom-button, .custom-btn {
   display: inline-block;
@@ -86,11 +84,9 @@ h2 {
   background-color: #3d56a95b;
 }
 
-
 .correct-answer {
   background-color: #36b836bc;
 }
-
 
 .incorrect-answer {
   background-color: rgba(255, 0, 0, 0.334);
@@ -99,6 +95,23 @@ h2 {
 .start-button:hover {
   background-color: #4563a0a3; 
 }
-p{
+
+p {
   color: black;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+  
+  h2 {
+    margin-left: 0;
+  }
+  
+
+  .custom-button, .custom-btn {
+    width: 200px;
+  }
 }
